@@ -1,0 +1,12 @@
+num = int(input())
+num1 = num
+res = 0
+ex = 0
+while(num > 0):
+    ex = num % 10
+    res = res * 10 + ex
+    num = num // 10
+if res == num1:
+    print('palindrom')
+else:
+    print('ne_palindrom')
