@@ -1,0 +1,30 @@
+a = [1123, 121, 22, 655, 5444, 1]
+max = 0
+for i in range(0, len(a)):
+	if a[i] > max:
+		max = a[i]
+
+
+def even_num(x): 
+	if x % 2 == 0:
+		return x
+	else:
+		return x + max		
+
+a = sorted(a, key=even_num)  # поставили сначала четные числа по возрастанию, затем нечетные
+
+for i in range(0, len(a)):
+	if a[i] % 2 == 1:
+		num = i
+		break
+# нашли индекс с которого начинаются нечетные числа    
+
+def buble_sort(anylist):  # начиная с этого индекса отсортировали массив методом Buble Sort
+	last_item = len(anylist) - 1
+	for i in range(num, last_item):
+		for z in range(num, last_item):
+			if anylist[z] < anylist[z + 1]:
+				anylist[z], anylist[z + 1] = anylist[z + 1], anylist[z]
+	return anylist		
+res = buble_sort(a)	
+print(res)
